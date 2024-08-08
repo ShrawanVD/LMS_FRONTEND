@@ -1,0 +1,142 @@
+*{
+    font-family: "Raleway", sans-serif;
+
+}
+
+.loginForm{
+  height: 100vh;
+  background-color: black;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 1rem 0rem;
+  }
+  
+  .card {
+    width: 100%;
+    background-color: #f8f8f8; /* Warna card */
+    padding: 20px;
+    border-radius: 12px; /* Border radius card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem; 
+  }
+
+  .logoImage{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .logoImage img{
+    height: 80px;
+    width: auto;
+    border-radius: 15px;
+  }
+
+  .card h2{
+    text-align: left;
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 31px;
+    font-family: "Raleway", sans-serif;
+  }
+  .card h4 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 2px solid #ddd; /* Border color input */
+    border-radius: 8px; /* Border radius input */
+    transition: border-color 0.3s ease-in-out;
+    outline: none;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: #f4f4f4; 
+
+    
+  }
+  input::placeholder{
+    font-weight: 500;
+  }
+  
+  input:focus {
+    border-color: #ff9900; /* Warna input saat focus */
+  }
+  
+  button {
+    /* background-color: #1c6c80;  */
+    background-color: #0e2a5c; 
+    font-size: 16px;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 8px; /* Border radius button */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #3395ad; 
+    color: black;
+  }
+
+
+  .forgotPassText{
+    margin-top: 1rem;
+    text-align: center;
+    cursor: pointer;
+  }
+  .forgotPassText:hover{
+    color: rgb(32, 112, 177);
+    font-weight: bold;
+    transition: ease-in-out 0.2s;
+  }
+
+  @media (max-width: 457px){
+    .card h2{
+      font-size: 25px;
+    }
+  }
+
+
+  /* password  */
+  .password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .password-container input {
+    width: 100%;
+    padding-right: 30px; /* Space for the eye icon */
+  }
+  
+  .password-container button {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .password-container svg {
+    margin-top: -10px;
+    width: 1em;
+    /* height: 1em; */
+  }
+  

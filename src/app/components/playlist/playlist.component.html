@@ -1,0 +1,62 @@
+<div>
+  <app-navbar></app-navbar>
+</div>
+
+<div class="course-content">
+  <!-- left side -->
+  <div class="video-section">
+    <!-- video section -->
+    <div class="video-container">
+      <iframe [src]="currentContentUrl" class="video-placeholder" allowfullscreen></iframe>
+    </div>
+
+    <!-- resources section -->
+    <div class="videoLower">
+      <h3>{{ videoTitle }}</h3>
+      <div class="videoNavbar">
+        <p (click)="setView('description')">Description</p>
+        <p (click)="setView('resources')">Resources</p>
+      </div>
+    </div>
+
+    <div class="videoDesResData">
+      <div class="DescContent" *ngIf="view === 'description'">
+        <h3>Description</h3>
+        <p>{{ activeModuleDescription }}</p>
+      </div>
+      <div class="ResContent" *ngIf="view === 'resources'">
+        <h3>Resources</h3>
+        <p>{{ activeModuleResources }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- right side -->
+  <div class="content-section">
+    <h3>Lesson Content</h3>
+    <div *ngFor="let lesson of lessons; let i = index" class="section">
+      <h4 (click)="toggleSection(i)" class="section-title">{{ lesson.lessonTitle }}</h4>
+      <ul *ngIf="activeSections[i]">
+        <li *ngFor="let video of lesson.videos; let j = index" class="module customModule" (click)="setModuleContent(video.url, i, j)"
+        [ngClass]="{'active-module': activeModuleIndex.lesson === i && activeModuleIndex.video === j}">
+          {{ video.title }}
+        </li>
+      </ul>
+      <hr />
+    </div>
+  </div>
+</div>
+
+
+
+<div class="view">
+  <h2>For watching the modules, kindly view from our application</h2>
+  <div class="coverpage-button">
+    <a
+      target="_blank"
+      href="https://play.google.com/store/apps/details?id=stage.curiotory.com&hl=en-IN"
+    >
+      <button>Download Our App</button>
+    </a>
+  </div>
+</div>

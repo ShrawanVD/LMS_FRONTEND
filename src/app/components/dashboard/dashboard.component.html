@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h1>
+    Hi
+    <span style="color: #0e2a5c; font-size: 24px">{{
+      userService.userData.name
+    }}</span
+    >,
+    <!-- <h1>Hi {{userService.userData.name}},  -->
+    <!-- <br> -->
+    let's start learning...
+  </h1>
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search by course name"
+      [(ngModel)]="searchQuery"
+    />
+  </div>
+  <!-- <div class="filters">
+<button *ngFor="let filter of filters" (click)="setFilter(filter)">{{filter}}</button>
+</div> -->
+  <div class="courseCardContainer">
+    <div class="course-card" *ngFor="let course of courses">
+      <img [src]="course.thumbnail" alt="{{ course.thumbnail }}" />
+      <div class="courseCardLower">
+        <h4>{{ course.title }}</h4>
+        <p>Duration : {{ course.duration }}</p>
+        <div class="progress-bar">
+          <div class="progress" [style.width.%]="course.progress"></div>
+        </div>
+        <button (click)="openCourse(course.language)">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+
