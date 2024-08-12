@@ -14,7 +14,7 @@ export class UserService {
 
   login(data: any) {
     return this.http
-      .post('https://lms-backend-3nru.onrender.com/api/payment/login', data)
+      .post('https://lms-backend-1-deyq.onrender.com/api/payment/login', data)
       .subscribe((result: any) => {
         localStorage.setItem('token', result.token);
         this.isUserLoggedIn.next(true);
@@ -29,7 +29,7 @@ export class UserService {
     );
     return this.http
       .post(
-        'https://lms-backend-3nru.onrender.com/api/payment/profile',
+        'https://lms-backend-1-deyq.onrender.com/api/payment/profile',
         {},
         { headers }
       )

@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class CourseService {
 
-  courseUrl = 'https://lms-backend-3nru.onrender.com/api/courses';
+  courseUrl = 'https://lms-backend-1-deyq.onrender.com/api/courses';
 
   constructor(private http:HttpClient) { }
 
@@ -27,6 +27,6 @@ export class CourseService {
   }
 
   getCourseById(id:any){
-    return this.http.get(`https://lms-backend-3nru.onrender.com/api/lessons/${id}`);
+    return this.http.get(`https://lms-backend-1-deyq.onrender.com/api/lessons/${id}`);
   }
 }
